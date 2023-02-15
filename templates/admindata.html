@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" >
+    <title>feedback</title>
+    <body>
+    <form id="admindata">
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase.js"></script>
+    <script src = 'https://code.jquery.com/jquery-3.6.0.min.js'></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="fetch.js"></script>
+<input type="text" id="myInput" placeholder="Search for names.." title="Type in a name">
+        <button type="button"  id="next"  onclick="retrieve(this);">go</button>
+<!--        <button type="button" id="next" formaction='filter.html'>Go</button>-->
+<!--&lt;!&ndash;&ndash;&gt;&lt;!&ndash;        &ndash;&gt;<a type="button" id="next" href="#" onclick="retrieve(this);" >GO</a>-->
+        <table class="table">
+            <thead>
+              <th>s.no</th>
+              <th>username</th>
+              <th>feedback</th>
+
+            </thead>
+
+             <tbody id="tbody1">
+              <tr>
+                  <td> </td>
+              </tr>
+
+             </tbody>
+        </table>
+
+     <button  type="submit" onclick="/show" method="post">show</button>
+
+</form>
+
+    {% if result %}
+    {{result}}
+    {% endif %}
+
+<img class="plot" src="data:image/png;base64, {{ plot_url1 }}" >
+</body>
+</html>
+
+
+
+<!--function additem(etext){-->
+<!--var stdno=0;-->
+<!--var al=document.getElementById('list');-->
+<!--var header=document.createElement('h2');-->
+<!--var e_text=document.createElement('li');-->
+<!--header.innerHTML='feedback-'+(++stdno);-->
+<!--e_text.innerHTML="Name: "+etext;-->
+<!--al.appendChild(header);-->
+<!--al.appendChild(e_text);-->
+<!--}-->
+<!--const db= firebase.database();-->
+<!--function fetchdata(){-->
+<!-- const dbRef=db.ref('insert');-->
+<!-- console.log("hello");-->
+<!--&lt;!&ndash;var currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();&ndash;&gt;-->
+<!--firebase.database().ref('insert').once('value',(snapshot) => {-->
+<!--&lt;!&ndash; once(dbRef,(snapshot) =>{&ndash;&gt;-->
+<!-- snapshot.forEach(childSnapshot => {-->
+<!-- let childKey = childSnapshot.key;-->
+<!-- let data=childSnapshot.val();-->
+<!-- records.push({"key":childKey,"data":data});-->
+<!--  console.log(childKey);-->
+<!--  console.log(data);-->
+<!-- var etext = childSnapshot.val(etext);-->
+<!-- additem(etext);-->
+
+<!-- }-->
+<!-- );-->
+<!-- });-->
+<!-- }-->
+<!--&lt;!&ndash;window.onload="fetchdata()";&ndash;&gt;-->
+<!--&lt;!&ndash;document.getElementById("admindata").load(fetchdata());&ndash;&gt;-->
+<!--</script>-->
+<!--</head>-->
+<!--<body onload="fetchdata()">-->
+<!--<form action="" >-->
+<!--<ul id="list">-->
+
+<!--</ul>-->
+
+<!--&lt;!&ndash;&lt;!&ndash;&ndash;&gt;<script src = "fetch.js"></script>&ndash;&gt;-->
+

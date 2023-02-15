@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sample Registration Page</title>
+
+    <style>
+        body {
+            background-color: rgb(230, 236, 240);
+        }
+
+        form {
+            padding: 10px;
+            line-height: 10px
+        }
+
+        main {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background: beige;
+        }
+
+
+
+        p {
+            font-family: Open Sans;
+            color: black;
+            border-bottom: 1.50px solid black;
+            font-family: cursive;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <p style="color:rgb(69, 141, 10);
+        font-size:49.9px;
+        font-weight:bold;
+        text-align:center;"> Registration form</p>
+
+
+       <form  action="slog.html" method="post"  onsubmit="submitform()"  id="analysis">
+          <table align="center">
+
+          <tr>
+              <td>
+                  <label>First Name</label>
+              </td>
+              <td><input type="text" id="fname" name="fname" />
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <label>Last Name</label>
+              </td>
+              <td><input type="text" id="lname" name="lname" />
+              </td>
+          </tr>
+          <tr>
+              <td><label>User Name</label>
+              </td>
+              <td><input type="text" id="uname" name="uname" />
+              </td>
+          </tr>
+
+
+
+            <tr>
+
+                <td>
+                    <label >Gender</label>
+                </td>
+                <td>
+
+                    <input type="radio" name="male"/>
+                    <label >Male</label>
+
+                    <input type="radio" name="female"/>
+                    <label >Female </label>
+
+                    <input type="radio" name="other"/>
+                    <label >Other</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                  <label>Birthday</label>
+                </td>
+                  <td><input type="date" id="bday" name="bday">
+                  </td>
+            </tr>
+            <tr>
+                <td><label>Email</label>
+                </td>
+                <td><input type="email" id="email" name="email" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>contact No.</label>
+                </td>
+                <td><input type="text" id="con-ph" name="telnum"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>
+                        Password
+                    </label>
+                </td>
+                <td><input type="text" id="con-pwd" name="pword" />
+                </td>
+            </tr>
+            <tr>
+                <td><label>
+                        Confirm  password
+                    </label>
+                </td>
+                <td> <input type="text" id="con-cnfpwd" name="pword2" />
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit" >submit</button></td>
+                <td><a href="slog.html">Already registered?</a></td>
+            </tr>
+
+
+      </table>
+
+</form>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase.js"></script>
+<script src="firebase.js"></script>
+</body>
+
+</html>
